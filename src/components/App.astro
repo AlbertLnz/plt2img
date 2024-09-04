@@ -4,12 +4,11 @@ import PromptArea from '@/components/PromptArea.astro'
 import ResultArea from '@/components/ResultArea.astro'
 import AdMiddle from '@/components/AdMiddle.astro'
 ---
-
 <section id="app">
     <PromptArea />
     <div class="middle">
         <AdMiddle />
-        <button>Convert</button>
+        <button id="converter">Convert</button>
         <AdMiddle />
     </div>
     <ResultArea aspect_ratio='16/9'/>
@@ -18,9 +17,9 @@ import AdMiddle from '@/components/AdMiddle.astro'
 <style>
     .middle {
         display: grid;
-        grid-template-columns: 1fr; /* Una sola columna que ocupa todo el ancho disponible */
-        grid-template-rows: auto auto auto; /* Tres filas, ajusta según el contenido */
-        height: 100%; /* Ocupa toda la altura disponible en el contenedor padre */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        height: 100%;
         background-color: crimson;
         flex-grow: 1;
     }
@@ -30,3 +29,29 @@ import AdMiddle from '@/components/AdMiddle.astro'
         align-items: center;
     }
 </style>
+
+<script>
+    const $ = (selector: string): Element | null => document.querySelector(selector)
+
+    const $btnConverter = $('#converter') as HTMLButtonElement
+    const $promptInput = $('#prompt-input') as HTMLTextAreaElement
+    const $image = $('#result-image') as HTMLImageElement
+
+    if (!$btnConverter || !$promptInput || !$image) return
+
+    $btnConverter.addEventListener('click', () => {
+        fetch('http://127.0.0.1:5000/get-plot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ python_code: $promptInput.value }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                const imgBase64 = data.image_base64
+                $image.src = `data:image/png;base64,${imgBase64}`
+        })
+        .catch(error => console.error('Error fetching the plot:', error))
+    })
+</script>

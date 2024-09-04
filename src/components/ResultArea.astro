@@ -1,5 +1,4 @@
 ---
-
 interface Props {
   aspect_ratio: string
 }
@@ -8,13 +7,14 @@ const { aspect_ratio } = Astro.props
 ---
 
 <article>
-    
     <div>
-        <img 
+        <img
+            id="result-image"
             style={{ aspectRatio: aspect_ratio }} 
-            src="https://images.squarespace-cdn.com/content/v1/51c30e7ce4b089f545ce58b3/1372097481530-PTVEWDS947B6KPROUGY4/Beagle1.jpg" alt="">
+            src="https://images.squarespace-cdn.com/content/v1/51c30e7ce4b089f545ce58b3/1372097481530-PTVEWDS947B6KPROUGY4/Beagle1.jpg"
+            alt="" 
+        />
     </div>
-
 </article>
 
 <style>
@@ -33,7 +33,28 @@ const { aspect_ratio } = Astro.props
         overflow: hidden;
         max-width: 100%;
         max-height: 100%;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
     }
 
-    
+    #result-image.fullscreen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        border-radius: 0;
+        z-index: 9999;
+    }
 </style>
+
+<script type="module">
+    document.addEventListener("DOMContentLoaded", function() {
+        const image = document.querySelector('#result-image');
+        image.addEventListener('click', function() {
+            image.classList.toggle('fullscreen');
+        });
+    });
+</script>
