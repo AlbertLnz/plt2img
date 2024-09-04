@@ -1,4 +1,6 @@
 footer {
     height: 20%;
-    background-color: darkgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

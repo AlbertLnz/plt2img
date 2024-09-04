@@ -1,6 +1,6 @@
 #app {
     display: flex;
     height: 70%;
-    background-color: tomato;
+    /* background-color: tomato; */
     justify-content:space-between; /* or space-around */
 }
