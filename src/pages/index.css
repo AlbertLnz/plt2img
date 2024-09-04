@@ -1,0 +1,28 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #fff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #222;
+  color: var(--primary-text-color);
+}
+
+main {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  margin: 0 15%;
+  background: #5196B5;
+}

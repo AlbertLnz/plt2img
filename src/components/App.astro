@@ -1,0 +1,32 @@
+---
+import '@/styles/app.css'
+import PromptArea from '@/components/PromptArea.astro'
+import ResultArea from '@/components/ResultArea.astro'
+import AdMiddle from '@/components/AdMiddle.astro'
+---
+
+<section id="app">
+    <PromptArea />
+    <div class="middle">
+        <AdMiddle />
+        <button>Convert</button>
+        <AdMiddle />
+    </div>
+    <ResultArea aspect_ratio='16/9'/>
+</section>
+
+<style>
+    .middle {
+        display: grid;
+        grid-template-columns: 1fr; /* Una sola columna que ocupa todo el ancho disponible */
+        grid-template-rows: auto auto auto; /* Tres filas, ajusta según el contenido */
+        height: 100%; /* Ocupa toda la altura disponible en el contenedor padre */
+        background-color: crimson;
+        flex-grow: 1;
+    }
+
+    button {
+        place-self: center;
+        align-items: center;
+    }
+</style>

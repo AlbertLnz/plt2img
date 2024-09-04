@@ -1,0 +1,15 @@
+aside {
+    height: 100%;
+    background-color: blueviolet;
+    top: 0;
+    position: absolute;
+    width: 15%;
+}
+
+#asideLeft {
+    left: 0;
+}
+
+#asideRight {
+    right: 0;
+}
