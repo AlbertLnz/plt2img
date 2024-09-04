@@ -1,16 +1,10 @@
 ---
-
 ---
 
 <article>
     <h2>Insert your Python code</h2>
     <textarea name="py-prompt" id="prompt-input"></textarea>
-    <ul>
-       <li>Aspect-ratio</li>
-       <li>Opt_2</li>
-       <li>Opt_3</li>
-       <li>Info</li>
-    </ul>
+    <p id="errorMsg">Error message space</p>
 </article>
 
 <style>
@@ -61,9 +55,29 @@
         color: white; /* Color del texto seleccionado */
     }
 
-    ul {
-        list-style: none;
+    #errorMsg {
         display: flex;
         font-size: 10px;
+        color: red;
+        width: 100%;
+        padding-left: 8px;
+        visibility: hidden;
     }
+
+    #errorMsg.show {
+        visibility: visible;
+    }
+
+    #errorMsg.show:hover {
+        cursor: pointer;        
+    }
+
 </style>
+
+<script>
+    const $errorMsg = document.getElementById('errorMsg') as HTMLParagraphElement
+    $errorMsg.addEventListener('click', () => {
+        $errorMsg.classList.remove('show')
+        $errorMsg.textContent = 'Error message space'
+    })
+</script>
