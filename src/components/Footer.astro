@@ -3,6 +3,7 @@
 // <!-- <Pardon /> -->
 import '@/styles/footer.css'
 import GitHub from '@/assets/svgs/GitHub.astro'
+import Coffee from '@/assets/svgs/Coffee.astro'
 
 const githubStyles = `
     display: flex;
@@ -11,11 +12,15 @@ const githubStyles = `
     height: 40px;
     stroke: #fff;
 `
-
 ---
 
 <footer>
    <div id="container">
+        <span style={{ position: 'absolute', zIndex: '20' }}>
+            <a href="https://www.buymeacoffee.com/albertlnz" target="_blank">
+                <Coffee id="coffee" />
+            </a>
+        </span>
         <div id="github">
             <a href="https://github.com/AlbertLnz/plt2img" target="_blank">
                 <GitHub style={githubStyles} />
@@ -58,6 +63,7 @@ const githubStyles = `
         display: flex;
         justify-content: center;
         padding-bottom: 5px;
+        text-align: center;
     }
 
     @keyframes rainbow { 
@@ -70,6 +76,15 @@ const githubStyles = `
         100% {
             background-position: 0% 82%;
         }
+    }
+
+    #coffee {
+        position: relative;
+        aspect-ratio: '0,692307692';
+        width: 5%;
+        margin: 5px -30px 0 -20px;
+        top: 0;
+        z-index: 20;
     }
 
 </style>
