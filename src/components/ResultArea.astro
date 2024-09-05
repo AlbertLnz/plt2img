@@ -109,7 +109,9 @@ import poster2 from '@/assets/imgs/poster2.png'
         const $imgContainer = document.getElementById('img-container')
 
         $image.addEventListener('click', function() {
-            $imgContainer.classList.toggle('fullscreen')
+            document.startViewTransition(() => {
+                $imgContainer.classList.toggle('fullscreen')
+            })
         })
 
         $downloadBtn.addEventListener('click', function() {
