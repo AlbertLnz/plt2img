@@ -7,6 +7,9 @@ import numpy as np
 import io
 import base64
 import black
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 CORS(app)
@@ -75,4 +78,4 @@ def get_plot():
         return jsonify({"image_base64": image_error, "message": "Incorrect Python syntax"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
