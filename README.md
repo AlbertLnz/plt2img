@@ -1,47 +1,73 @@
-# Astro Starter Kit: Minimal
+<div align="center">
 
-```sh
-npm create astro@latest -- --template minimal
-```
+# Plt2Img Converter
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+FOTO DE LA WEB
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Astro][Astro]][Astro-url]
 
-## 🚀 Project Structure
+[Astro]: https://img.shields.io/badge/astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white
+[Astro-url]: https://astro.build/
 
-Inside of your Astro project, you'll see the following folders and files:
+[![Python][Python]][Python-url]
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+[Python]: https://img.shields.io/badge/python-1E415D?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://www.python.org/
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+[![Docker][Docker]][Docker-url]
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+[Docker]: https://img.shields.io/badge/docker-1D63ED?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
 
-Any static assets, like images, can be placed in the `public/` directory.
+**Plt2Img** es una herramienta web que convierte código de Matplotlib en imágenes visualmente atractivas. Ideal para desarrolladores y científicos de datos que desean generar visualizaciones a partir de código Python sin necesidad de ejecutar el código localmente. Con Plt2Img, puedes simplemente subir tu código de Matplotlib y obtener una imagen lista para usar en informes, presentaciones y más.
 
-## 🧞 Commands
+</div>
 
-All commands are run from the root of the project, from a terminal:
+> [!NOTE]
+> 📊 Matplotlib
+> 🔢 Numpy
+> 🐼 Pandas
+> 🌊 Seaborn
+> 👩🏾‍🔬 Scipy
+> 🐍 Sympy
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## ⏲️ Ahorra tiempo
 
-## 👀 Want to learn more?
+| Pasos | No usando I                                             | Usando Plt2Img                              |
+| :---- | :------------------------------------------------------ | :------------------------------------------ |
+| 1️⃣    | Solicitar el código de Matplotlib a ChatGPT             | Solicitar el código de Matplotlib a ChatGPT |
+| 2️⃣    | Ir la carpeta donde se encuentra el Venv de Pyhton      | Ir a **Plt2Img.online**                     |
+| 3️⃣    | Abrir una terminal                                      | Pegar el código y obtener la imagen         |
+| 4️⃣    | Activar el VENV: `source .venv/bin/activate`            | 🛌🏽😴                                        |
+| 5️⃣    | Ejecutar Jupyter Notebook: `jupyter notebook`           | 🛌🏽😴                                        |
+| 6️⃣    | Crear un archivo de Jupyter, pegar y obtener el gráfico | 🛌🏽😴                                        |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> Visita la [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
+
+## ▶️ Video Demo
+
+## 📖 Installation
+
+| Command                                                      | Action                                      |
+| :----------------------------------------------------------- | :------------------------------------------ |
+| `git clone https://github.com/AlbertLnz/plt2img`             | Clone the repository                        |
+| `cd plt2img`                                                 | Enter to the project                        |
+| `npm install`                                                | Installs dependencies                       |
+| `cd src/backend`                                             | Enter to the backend project                |
+| `docker build -t plt2img .`                                  | Run the Docker image                        |
+| `docker run -d -p 5000:5000 --name plt2imgContainer plt2img` | Run the Docker container with the image     |
+| `npm run dev`                                                | Starts local dev server at `localhost:4321` |
+
+| [![My Skills](https://skillicons.dev/icons?i=astro)](https://skillicons.dev) | Backend is running at `http://localhost:5000` |
+| ---------------------------------------------------------------------------- | :-------------------------------------------- |
+
+| [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev) | Frontend is running at `http://localhost:4321` |
+| ----------------------------------------------------------------------------- | :--------------------------------------------- |
+
+> [!IMPORTANT]
+> Remember to configure the correct **fetch url** in the `src/components/App.astro` file.
+> Remember to stop the container that is running in 2nd plane when you are done.
+
+## ☕ Buy me a coffee
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/albertlnz)
