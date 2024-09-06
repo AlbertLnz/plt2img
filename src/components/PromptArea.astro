@@ -4,7 +4,7 @@
 <article>
     <h2>Insert your Python code</h2>
     <textarea name="py-prompt" id="prompt-input"></textarea>
-    <p id="errorMsg">Error message space</p>
+    <p id="fetchMsg">Message space</p>
 </article>
 
 <style>
@@ -55,29 +55,28 @@
         color: white; /* Color del texto seleccionado */
     }
 
-    #errorMsg {
+    #fetchMsg {
         display: flex;
         font-size: 10px;
-        color: red;
         width: 100%;
         padding-left: 8px;
         visibility: hidden;
     }
 
-    #errorMsg.show {
+    #fetchMsg.show {
         visibility: visible;
     }
 
-    #errorMsg.show:hover {
+    #fetchMsg.show:hover {
         cursor: pointer;        
     }
 
 </style>
 
 <script>
-    const $errorMsg = document.getElementById('errorMsg') as HTMLParagraphElement
-    $errorMsg.addEventListener('click', () => {
-        $errorMsg.classList.remove('show')
-        $errorMsg.textContent = 'Error message space'
+    const $fetchMsg = document.getElementById('fetchMsg') as HTMLParagraphElement
+    $fetchMsg.addEventListener('click', () => {
+        $fetchMsg.classList.remove('show')
+        $fetchMsg.textContent = 'Error message space'
     })
 </script>
