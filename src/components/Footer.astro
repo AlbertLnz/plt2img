@@ -1,9 +1,9 @@
 ---
 // import Pardon from '@/components/Pardon.astro'
 // <!-- <Pardon /> -->
-import '@/styles/footer.css'
-import GitHub from '@/assets/svgs/GitHub.astro'
-import Coffee from '@/assets/svgs/Coffee.astro'
+import "@/styles/footer.css";
+import GitHub from "@/assets/svgs/GitHub.astro";
+import Coffee from "@/assets/svgs/Coffee.astro";
 
 const githubStyles = `
     display: flex;
@@ -11,24 +11,43 @@ const githubStyles = `
     width: 40px;
     height: 40px;
     stroke: #fff;
-`
+`;
 ---
 
 <footer>
-   <div id="container">
-        <span style={{ position: 'absolute', zIndex: '20' }}>
+    <div id="container">
+        <span
+            style={{
+                position: "absolute",
+                zIndex: "20",
+                height: "0",
+            }}
+        >
             <a href="https://www.buymeacoffee.com/albertlnz" target="_blank">
                 <Coffee id="coffee" />
             </a>
         </span>
         <div id="github">
-            <a href="https://github.com/AlbertLnz/plt2img" target="_blank">
+            <a
+                href="https://github.com/AlbertLnz/plt2img"
+                target="_blank"
+                style={{ zIndex: "20" }}
+            >
                 <GitHub style={githubStyles} />
             </a>
-            <p>Made by <span id="name"><a href="https://github.com/AlbertLnz" target="_blank">AlbertLnz</a></span></p>
+            <p>
+                Made by <span id="name"
+                    ><a href="https://github.com/AlbertLnz" target="_blank"
+                        >AlbertLnz</a
+                    ></span
+                >
+            </p>
         </div>
-        <span id="pardon">Sorry for the ads. They help keep the site running. Thanks for your support!</span>
-   </div>
+        <span id="pardon"
+            >Sorry for the ads. They help keep the site running. Thanks for your
+            support!</span
+        >
+    </div>
 </footer>
 
 <style>
@@ -47,12 +66,24 @@ const githubStyles = `
 
     span#name {
         font-weight: 800;
-        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background: linear-gradient(
+            124deg,
+            #ff2400,
+            #e81d1d,
+            #e8b71d,
+            #e3e81d,
+            #1de840,
+            #1ddde8,
+            #2b1de8,
+            #dd00f3,
+            #dd00f3
+        );
         background-size: 1800% 1800%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         animation: rainbow 18s ease infinite;
+        z-index: 20;
     }
 
     span#pardon {
@@ -66,7 +97,7 @@ const githubStyles = `
         text-align: center;
     }
 
-    @keyframes rainbow { 
+    @keyframes rainbow {
         0% {
             background-position: 0% 82%;
         }
@@ -80,11 +111,10 @@ const githubStyles = `
 
     #coffee {
         position: relative;
-        aspect-ratio: '0,692307692';
+        aspect-ratio: "0,692307692";
         width: 5%;
         margin: 5px -30px 0 -20px;
         top: 0;
         z-index: 20;
     }
-
 </style>
