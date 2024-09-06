@@ -7,12 +7,15 @@ import Footer from '@/components/Footer.astro'
 import './index.css'
 ---
 
-<Layout title="pl2img title" description='pl2img description'>
-	<AdVertical area="asideLeft"/>
-		<main>
-			<Header />
-			<App />
-			<Footer />
-		</main>
-	<AdVertical area="asideRight"/>
+<Layout
+  title='Plt2Img'
+  description='Plt2Img Converter is a web tool that converts Matplotlib code into visually appealing images. Ideal for developers and data scientists who want to generate visualizations from Python code without needing to run the code locally. With plt2img, you can simply upload your Matplotlib code and get an image ready to use in reports, presentations, and more.'
+>
+  <AdVertical area='asideLeft' />
+  <main>
+    <Header />
+    <App />
+    <Footer />
+  </main>
+  <AdVertical area='asideRight' />
 </Layout>

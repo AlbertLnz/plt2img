@@ -8,21 +8,28 @@ const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang='es'>
   <head>
     <title>{title}</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="author" content="AlbertLnz" />
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='author' content='AlbertLnz' />
     <meta
-      name="keywords"
-      content="javascript, react, reactjs, albertlnz, js, programación, desarrollo web"
+      name='keywords'
+      content='javascript, react, reactjs, albertlnz, js, programación, desarrollo web'
     />
-    <meta name="theme-color" content="#f7df1e" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name='theme-color' content='#f7df1e' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+
+    <!-- Google Adsense -->
+    <script
+      async
+      src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3990620114363490'
+      crossorigin='anonymous'
+    ></script>
   </head>
   <body>
     <slot />
