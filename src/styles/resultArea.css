@@ -10,6 +10,7 @@
 #img-container {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 #result-image {
@@ -80,4 +81,17 @@
   -webkit-transition: border-color 2000ms linear;
   -ms-transition: border-color 2000ms linear;
   transition: border-color 2000ms linear;
+}
+
+#msg-imgDownloading {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  font-size: 12px;
+  bottom: 0;
+  margin: 0;
+  translate: 0 150%;
+  text-align: center;
+  font-weight: 700;
+  color: rgb(0, 128, 255);
 }

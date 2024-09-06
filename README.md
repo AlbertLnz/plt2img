@@ -23,7 +23,7 @@ FOTO DE LA WEB
 
 </div>
 
-> [!NOTE]
+> Librerías soportadas
 > 📊 Matplotlib
 > 🔢 Numpy
 > 🐼 Pandas
@@ -33,7 +33,7 @@ FOTO DE LA WEB
 
 ## ⏲️ Ahorra tiempo
 
-| Pasos | No usando I                                             | Usando Plt2Img                              |
+| Pasos | ☠️ No usando Plt2Img                                    | 🌟 Usando Plt2Img                           |
 | :---- | :------------------------------------------------------ | :------------------------------------------ |
 | 1️⃣    | Solicitar el código de Matplotlib a ChatGPT             | Solicitar el código de Matplotlib a ChatGPT |
 | 2️⃣    | Ir la carpeta donde se encuentra el Venv de Pyhton      | Ir a **Plt2Img.online**                     |
@@ -42,7 +42,7 @@ FOTO DE LA WEB
 | 5️⃣    | Ejecutar Jupyter Notebook: `jupyter notebook`           | 🛌🏽😴                                        |
 | 6️⃣    | Crear un archivo de Jupyter, pegar y obtener el gráfico | 🛌🏽😴                                        |
 
-> Visita la [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
+> Visita [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
 
 ## ▶️ Video Demo
 
@@ -52,17 +52,17 @@ FOTO DE LA WEB
 | :----------------------------------------------------------- | :------------------------------------------ |
 | `git clone https://github.com/AlbertLnz/plt2img`             | Clone the repository                        |
 | `cd plt2img`                                                 | Enter to the project                        |
-| `npm install`                                                | Installs dependencies                       |
+| `npm install`                                                | Install dependencies                        |
 | `cd src/backend`                                             | Enter to the backend project                |
 | `docker build -t plt2img .`                                  | Run the Docker image                        |
 | `docker run -d -p 5000:5000 --name plt2imgContainer plt2img` | Run the Docker container with the image     |
 | `npm run dev`                                                | Starts local dev server at `localhost:4321` |
 
-| [![My Skills](https://skillicons.dev/icons?i=astro)](https://skillicons.dev) | Backend is running at `http://localhost:5000` |
-| ---------------------------------------------------------------------------- | :-------------------------------------------- |
+| [![Frontend](https://skillicons.dev/icons?i=astro)](https://skillicons.dev) | Frontend is running at `http://localhost:4321` |
+| --------------------------------------------------------------------------- | :--------------------------------------------- |
 
-| [![My Skills](https://skillicons.dev/icons?i=python)](https://skillicons.dev) | Frontend is running at `http://localhost:4321` |
-| ----------------------------------------------------------------------------- | :--------------------------------------------- |
+| [![Backend](https://skillicons.dev/icons?i=python)](https://skillicons.dev) | Backend is running at `http://localhost:5000` |
+| --------------------------------------------------------------------------- | :-------------------------------------------- |
 
 > [!IMPORTANT]
 > Remember to configure the correct **fetch url** in the `src/components/App.astro` file.

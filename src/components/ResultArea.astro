@@ -6,6 +6,7 @@ import '@/styles/resultArea.css'
   <div id='img-container'>
     <img src='/assets/poster.webp' alt='Poster' id='result-image' />
     <button id='downloadBtn'></button>
+    <p id='msg-imgDownloading'>Downloading image...</p>
   </div>
 </article>
 
@@ -14,6 +15,7 @@ import '@/styles/resultArea.css'
     const $image = document.querySelector('#result-image')
     const $downloadBtn = document.getElementById('downloadBtn')
     const $imgContainer = document.getElementById('img-container')
+    const $msgImgDownloading = document.getElementById('msg-imgDownloading')
 
     $image.addEventListener('click', function () {
       document.startViewTransition(() => {
@@ -22,10 +24,12 @@ import '@/styles/resultArea.css'
     })
 
     $downloadBtn.addEventListener('click', function () {
+      $msgImgDownloading.style.visibility = 'visible'
       const link = document.createElement('a')
       link.href = $image.src
       link.download = 'my-plot.png'
       link.click()
+      $msgImgDownloading.style.visibility = 'hidden'
     })
   })
 </script>
