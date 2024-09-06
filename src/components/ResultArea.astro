@@ -1,124 +1,31 @@
 ---
-import { Image } from 'astro:assets'
-import poster2 from '@/assets/imgs/poster2.png'
+import '@/styles/resultArea.css'
 ---
 
-<article>
-    <div id="img-container">
-        <Image
-            id="result-image"
-            src={poster2}
-            alt=""
-        />
-        <button id="downloadBtn"></button>
-    </div>
+<article id='resultArea'>
+  <div id='img-container'>
+    <img src='/assets/poster.webp' alt='Poster' id='result-image' />
+    <button id='downloadBtn'></button>
+  </div>
 </article>
 
-<style>
-    article {
-        /* background-color: blue; */
-        height: calc(100% - 20px);
-        width: calc(35%);
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-    }
+<script type='module'>
+  document.addEventListener('DOMContentLoaded', function () {
+    const $image = document.querySelector('#result-image')
+    const $downloadBtn = document.getElementById('downloadBtn')
+    const $imgContainer = document.getElementById('img-container')
 
-    div {
-        position: relative;
-        display: flex;
-    }
-
-    #result-image {
-        aspect-ratio: var(aspect_ratio);
-        border-style: dashed;
-        border-width: 1px;
-        border-radius: 2%;
-        overflow: hidden;
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-    }
-
-    #result-image:hover {
-        border-style: dashed;
-        border-color: rgba(0, 128, 255, 0.644);
-        box-shadow: 0 0 7px rgba(0, 128, 255, 0.644);
-        scale: 1.02;
-    }
-
-    div.fullscreen {
-        background: transparent;
-        z-index: 30;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        object-fit: contain;
-        padding: 50px 0;
-        
-
-        #result-image:hover {
-            scale: 0.98;
-        }
-
-        button {
-            display: none;
-        }
-    }
-
-    button {
-        width: 30px;
-        height: 30px;
-        background-color: #fcd200ef;
-        background-image: url('https://cdn-icons-png.flaticon.com/512/189/189249.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border-style: solid;
-        border-color: #2a6853;
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        right: 0;
-        margin: 0 4% 4% 0;
-    }
-
-    button:hover {
-        cursor: pointer;
-        border-color: #16362c;
-        -webkit-transition: border-color 2000ms linear;
-        -ms-transition: border-color 2000ms linear;
-        transition: border-color 2000ms linear;
-    }
-</style>
-
-<script type="module">
-    document.addEventListener("DOMContentLoaded", function() {
-        const $image = document.querySelector('#result-image')
-        const $downloadBtn = document.getElementById('downloadBtn')
-        const $imgContainer = document.getElementById('img-container')
-
-        $image.addEventListener('click', function() {
-            document.startViewTransition(() => {
-                $imgContainer.classList.toggle('fullscreen')
-            })
-        })
-
-        $downloadBtn.addEventListener('click', function() {
-            const link = document.createElement('a')
-            link.href = $image.src
-            link.download = 'my-plot.png'
-            link.click()
-        })
+    $image.addEventListener('click', function () {
+      document.startViewTransition(() => {
+        $imgContainer.classList.toggle('fullscreen')
+      })
     })
+
+    $downloadBtn.addEventListener('click', function () {
+      const link = document.createElement('a')
+      link.href = $image.src
+      link.download = 'my-plot.png'
+      link.click()
+    })
+  })
 </script>

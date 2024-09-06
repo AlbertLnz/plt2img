@@ -1,4 +1,11 @@
 header {
-    height: 10%;
-    /* background-color: chartreuse; */
+  height: 10%;
+}
+
+header {
+  font-size: xx-large;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

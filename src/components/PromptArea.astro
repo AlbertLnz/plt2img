@@ -1,82 +1,17 @@
 ---
+import '@/styles/promptArea.css'
 ---
 
-<article>
-    <h2>Insert your Python code</h2>
-    <textarea name="py-prompt" id="prompt-input"></textarea>
-    <p id="fetchMsg">Message space</p>
+<article id='promptArea'>
+  <h2>Insert your Python code</h2>
+  <textarea name='py-prompt' id='prompt-input'></textarea>
+  <p id='fetchMsg'>Message space</p>
 </article>
 
-<style>
-    article {
-        /* background-color: blue; */
-        height: calc(100% - 20px);
-        width: calc(35%);
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    textarea {
-        resize: none;
-        width: 100%;
-        display: flex;
-        flex-grow: 1;
-        font-size: 10px;
-        font-family: 'JetBrains Mono', monospace;
-        background-color: #1F1F1F;
-        color: white;
-        border-style: dashed;
-        border-radius: 2%;
-        padding: 15px;
-        overflow-y: auto;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.5) rgba(51, 58, 69, 0.8);
-        line-height: 1.45;
-        letter-spacing: 0.3px;
-        cursor: text;
-    }
-
-    textarea:focus {
-        outline: none;
-        border-style: dashed;
-        border-color: rgba(255, 255, 0, 0.644);
-        box-shadow: 0 0 7px rgba(255, 255, 0, 0.644);
-    }
-    
-    textarea::selection {
-        background: rgba(255, 255, 0, 0.32); /* Color de selección del texto */
-        color: white; /* Color del texto seleccionado */
-    }
-
-    #fetchMsg {
-        display: flex;
-        font-size: 10px;
-        width: 100%;
-        padding-left: 8px;
-        visibility: hidden;
-    }
-
-    #fetchMsg.show {
-        visibility: visible;
-    }
-
-    #fetchMsg.show:hover {
-        cursor: pointer;        
-    }
-
-</style>
-
 <script>
-    const $fetchMsg = document.getElementById('fetchMsg') as HTMLParagraphElement
-    $fetchMsg.addEventListener('click', () => {
-        $fetchMsg.classList.remove('show')
-        $fetchMsg.textContent = 'Error message space'
-    })
+  const $fetchMsg = document.getElementById('fetchMsg') as HTMLParagraphElement
+  $fetchMsg.addEventListener('click', () => {
+    $fetchMsg.classList.remove('show')
+    $fetchMsg.textContent = 'Error message space'
+  })
 </script>
