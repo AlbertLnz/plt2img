@@ -1,10 +1,7 @@
 header {
-  height: 10%;
-}
-
-header {
+  height: 20%;
   font-size: xx-large;
-  font-weight: 600;
+  font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
