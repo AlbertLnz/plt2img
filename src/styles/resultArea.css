@@ -33,6 +33,10 @@
   scale: 1.02;
 }
 
+#result-image:hover + #downloadBtn {
+  scale: 1.4;
+}
+
 #img-container.fullscreen {
   background: transparent;
   z-index: 30;
@@ -73,9 +77,11 @@
   bottom: 0;
   right: 0;
   margin: 0 4% 4% 0;
+  transition: all 0.5s ease-in-out;
 }
 
 #downloadBtn:hover {
+  scale: 1.4;
   cursor: pointer;
   border-color: #16362c;
   -webkit-transition: border-color 2000ms linear;
