@@ -2,19 +2,15 @@
 
 # Plt2Img Converter
 
-FOTO DE LA WEB
+<img width='70%' src='https://github.com/AlbertLnz/plt2img/blob/master/website_image.webp' alt='Plt2Img website' />
 
-[![Astro][Astro]][Astro-url]
+[![Astro][Astro]][Astro-url] [![Python][Python]][Python-url] [![Docker][Docker]][Docker-url]
 
 [Astro]: https://img.shields.io/badge/astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white
 [Astro-url]: https://astro.build/
 
-[![Python][Python]][Python-url]
-
 [Python]: https://img.shields.io/badge/python-1E415D?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
-
-[![Docker][Docker]][Docker-url]
 
 [Docker]: https://img.shields.io/badge/docker-1D63ED?style=for-the-badge&logo=docker&logoColor=white
 [Docker-url]: https://www.docker.com/
@@ -45,6 +41,8 @@ FOTO DE LA WEB
 > Visita [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
 
 ## ▶️ Video Demo
+
+https://github.com/user-attachments/assets/cd868f9c-ec6c-4135-b8ea-bf6d025d2306
 
 ## 📖 Installation
 
