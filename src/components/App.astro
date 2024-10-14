@@ -21,6 +21,11 @@ import AdMiddle from '@/components/AdMiddle.astro'
     const $ = (selector: string): Element | null =>
       document.querySelector(selector)
 
+    const appInProduction = import.meta.env.PUBLIC_APP_IN_PRODUCTION
+    const fetchURL =
+      appInProduction === 'true'
+        ? 'https://plt2img-bnd.onrender.com/get-plot'
+        : 'http://127.0.0.1:5000/get-plot'
     const $btnConverter = $('#converter') as HTMLButtonElement
     const $promptInput = $('#prompt-input') as HTMLTextAreaElement
     const $image = $('#result-image') as HTMLImageElement
@@ -35,7 +40,7 @@ import AdMiddle from '@/components/AdMiddle.astro'
       $fetchMsg.style.color = '#04AA6D'
       $fetchMsg.textContent = 'Wait, your content is charging'
 
-      fetch('https://plt2img-bnd.onrender.com/get-plot', {
+      fetch(fetchURL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
