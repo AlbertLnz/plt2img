@@ -8,18 +8,16 @@
 
 [Astro]: https://img.shields.io/badge/astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white
 [Astro-url]: https://astro.build/
-
 [Python]: https://img.shields.io/badge/python-1E415D?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
-
 [Docker]: https://img.shields.io/badge/docker-1D63ED?style=for-the-badge&logo=docker&logoColor=white
 [Docker-url]: https://www.docker.com/
 
-**Plt2Img** es una herramienta web que convierte código de Matplotlib en imágenes visualmente atractivas. Ideal para desarrolladores y científicos de datos que desean generar visualizaciones a partir de código Python sin necesidad de ejecutar el código localmente. Con Plt2Img, puedes simplemente subir tu código de Matplotlib y obtener una imagen lista para usar en informes, presentaciones y más.
+**Plt2Img** is a web tool that converts Matplotlib code into visually appealing images. Ideal for developers and data scientists who want to generate visualizations from Python code without needing to run the code locally. With Plt2Img, you can simply upload your Matplotlib code and receive a ready-to-use image for reports, presentations and more
 
 </div>
 
-> Librerías soportadas
+> Supported libraries:
 > 📊 Matplotlib
 > 🔢 Numpy
 > 🐼 Pandas
@@ -27,18 +25,18 @@
 > 👩🏾‍🔬 Scipy
 > 🐍 Sympy
 
-## ⏲️ Ahorra tiempo
+## ⏲️ Save time
 
-| Pasos | ☠️ No usando Plt2Img                                    | 🌟 Usando Plt2Img                           |
-| :---- | :------------------------------------------------------ | :------------------------------------------ |
-| 1️⃣    | Solicitar el código de Matplotlib a ChatGPT             | Solicitar el código de Matplotlib a ChatGPT |
-| 2️⃣    | Ir la carpeta donde se encuentra el Venv de Pyhton      | Ir a **Plt2Img.online**                     |
-| 3️⃣    | Abrir una terminal                                      | Pegar el código y obtener la imagen         |
-| 4️⃣    | Activar el VENV: `source .venv/bin/activate`            | 🛌🏽😴                                        |
-| 5️⃣    | Ejecutar Jupyter Notebook: `jupyter notebook`           | 🛌🏽😴                                        |
-| 6️⃣    | Crear un archivo de Jupyter, pegar y obtener el gráfico | 🛌🏽😴                                        |
+| Steps | ☠️ Not using Plt2Img                                                     | 🌟 Using Plt2Img                       |
+| :---- | :----------------------------------------------------------------------- | :------------------------------------- |
+| 1️⃣    | Generate a Matplolib code with ChatGPT                                   | Generate a Matplolib code with ChatGPT |
+| 2️⃣    | Go to the folder where the Python virtual environment (.venv) is located | Go to **Plt2Img.online**               |
+| 3️⃣    | Open a terminal                                                          | Paste the code and obtain the image    |
+| 4️⃣    | Activate Virtual Environment: `source .venv/bin/activate`                | 🛌🏽😴                                   |
+| 5️⃣    | Run Jupyter Notebook: `jupyter notebook`                                 | 🛌🏽😴                                   |
+| 6️⃣    | Create a Jupyter file, paste the code y obtain the image                 | 🛌🏽😴                                   |
 
-> Visita [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
+> Visit [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
 
 ## ▶️ Video Demo
 
