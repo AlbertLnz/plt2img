@@ -36,7 +36,7 @@
 | 5️⃣    | Run Jupyter Notebook: `jupyter notebook`                                 | 🛌🏽😴                                   |
 | 6️⃣    | Create a Jupyter file, paste the code y obtain the image                 | 🛌🏽😴                                   |
 
-> Visit [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) para probarlo!
+> Visit [Plt2Img Converter](https://tailwindcss-animations.vercel.app/) to tested it!
 
 ## ▶️ Video Demo
 
