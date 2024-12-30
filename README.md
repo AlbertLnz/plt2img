@@ -13,7 +13,7 @@
 [Docker]: https://img.shields.io/badge/docker-1D63ED?style=for-the-badge&logo=docker&logoColor=white
 [Docker-url]: https://www.docker.com/
 
-**Plt2Img** is a web tool that converts Matplotlib code into visually appealing images. Ideal for developers and data scientists who want to generate visualizations from Python code without needing to run the code locally. With Plt2Img, you can simply upload your Matplotlib code and receive a ready-to-use image for reports, presentations and more
+**Plt2Img** is a web tool that converts Matplotlib code into images. Ideal for developers and data scientists who want to generate visualizations from Python code without needing to run the code locally. With Plt2Img, you can simply upload your Matplotlib code and receive a ready-to-use image for reports, presentations and more
 
 </div>
 
